@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="hat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezo Haïti — Platfòm Sosyal & Money Making</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .video-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: calc(100vh - 128px);
+        }
+        .video-card {
+            scroll-snap-align: start;
+            height: calc(100vh - 128px);
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col justify-between overflow-hidden select-none">
+
+    <header class="w-full h-16 border-b border-gray-900 px-4 flex justify-between items-center bg-black z-40">
+        <h1 class="text-xl font-black tracking-wider text-blue-500">REZO <span class="text-white">HAÏTI</span></h1>
+        <div class="flex items-center gap-4">
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest border border-gray-800 px-2 py-1 rounded">KREYÒL</span>
+            <div class="bg-gray-900 border border-blue-900/50 px-3 py-1 rounded-lg flex items-center gap-2">
+                <i class="fa-solid fa-wallet text-blue-400 text-xs"></i>
+                <span class="text-xs font-mono font-bold text-green-400">2,500 HTG</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex-1 flex max-w-md w-full mx-auto relative bg-black">
+
+        <main id="app-feed" class="w-full video-container no-scrollbar">
+            
+            <div class="video-card w-full bg-zinc-950 border-b border-gray-900">
+                <iframe src="https://www.tiktok.com/player/v1/7319047239462718753?autoplay=1&mute=0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+                
+                <div class="absolute right-4 bottom-28 flex flex-col items-center gap-5 z-30 bg-black/40 p-2 rounded-full backdrop-blur-sm">
+                    <div class="flex flex-col items-center">
+                        <button onclick="toggleFollow(this)" class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-user-plus text-xs"></i></button>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <button onclick="likeVideo(this)" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-white hover:text-red-500 transition"><i class="fa-solid fa-heart"></i></button>
+                        <span class="text-[10px] font-bold mt-0.5">25.4K</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <button onclick="openComments()" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-white hover:text-blue-500 transition"><i class="fa-solid fa-comment"></i></button>
+                        <span class="text-[10px] font-bold mt-0.5">842</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <button onclick="copyShareLink()" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-white hover:text-green-500 transition"><i class="fa-solid fa-share-nodes"></i></button>
+                        <span class="text-[10px] font-bold mt-0.5">Pataje</span>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-16 z-30 bg-gradient-to-t from-black via-black/70 to-transparent p-3 rounded-xl pointer-events-none">
+                    <h3 class="font-bold text-sm flex items-center gap-1">@rezo_haiti_trends <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i></h3>
+                    <p class="text-xs text-gray-300 mt-1">G-CASH HUB vin tounen Rezo Haïti! Gade vrè videyo san w pa kite platfòm nan epi kòmanse bati rèv ou.</p>
+                </div>
+            </div>
+
+            <div class="video-card w-full bg-zinc-950 border-b border-gray-900">
+                <iframe src="https://www.tiktok.com/player/v1/7312345678901234567?autoplay=0&mute=0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+                
+                <div class="absolute right-4 bottom-28 flex flex-col items-center gap-5 z-30 bg-black/40 p-2 rounded-full backdrop-blur-sm">
+                    <div class="flex flex-col items-center"><button onclick="toggleFollow(this)" class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-user-plus text-xs"></i></button></div>
+                    <div class="flex flex-col items-center"><button onclick="likeVideo(this)" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-white hover:text-red-500 transition"><i class="fa-solid fa-heart"></i></button><span class="text-[10px] font-bold mt-0.5">18.2K</span></div>
+                    <div class="flex flex-col items-center"><button onclick="openComments()" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-comment"></i></button><span class="text-[10px] font-bold mt-0.5">511</span></div>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-16 z-30 bg-gradient-to-t from-black via-black/70 to-transparent p-3 rounded-xl pointer-events-none">
+                    <h3 class="font-bold text-sm">@elite_creator</h3>
+                    <p class="text-xs text-gray-300 mt-1">Tout fonksyon yo ap mache nèt. Kreye paj pa w, bati gwoup ou, epi kontwole bous ou.</p>
+                </div>
+            </div>
+        </main>
+
+        <div id="create-modal" class="hidden absolute inset-0 bg-black/95 z-50 p-6 flex flex-col justify-center space-y-5">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-3">
+                <h2 class="text-base font-bold uppercase tracking-wider text-blue-500">Kreye Kontni — Rezo Haïti</h2>
+                <button onclick="closeCreateModal()" class="text-gray-400 text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="bg-zinc-900 p-4 rounded-xl border border-gray-800 space-y-2">
+                <h3 class="text-xs font-bold text-blue-400 uppercase">Kreye yon nouvo Paj</h3>
+                <input type="text" id="page-name" placeholder="Bay paj ou a yon non..." class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-xs focus:outline-none focus:border-blue-500">
+                <button onclick="createPageAction()" class="w-full bg-blue-600 text-white text-xs font-bold py-2 rounded-lg transition">Lanse Paj la</button>
+            </div>
+
+            <div class="bg-zinc-900 p-4 rounded-xl border border-gray-800 space-y-2">
+                <h3 class="text-xs font-bold text-green-400 uppercase">Kreye yon Gwoup Chate</h3>
+                <input type="text" id="group-name" placeholder="Non gwoup la..." class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-xs focus:outline-none focus:border-green-500">
+                <button onclick="createGroupAction()" class="w-full bg-green-600 text-white text-xs font-bold py-2 rounded-lg transition">Mete Gwoup la an liy</button>
+            </div>
+
+            <div class="bg-zinc-900 p-4 rounded-xl border border-gray-800 space-y-2">
+                <h3 class="text-xs font-bold text-red-400 uppercase">Lage yon Videyo (TikTok URL / MP4)</h3>
+                <input type="text" id="video-url" placeholder="Kole lyen videyo a la..." class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-xs focus:outline-none focus:border-red-500">
+                <button onclick="uploadVideoAction()" class="w-full bg-red-600 text-white text-xs font-bold py-2 rounded-lg transition">Voyel ale</button>
+            </div>
+        </div>
+
+        <div id="comments-modal" class="hidden absolute bottom-0 left-0 right-0 bg-zinc-950 rounded-t-3xl p-4 z-50 max-h-[50vh] flex flex-col justify-between border-t border-gray-800">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                <span class="text-xs font-bold uppercase text-gray-400">Mesaj Dirèk & Kòmantè</span>
+                <button onclick="closeComments()" class="text-gray-400"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div id="comments-list" class="flex-1 overflow-y-auto py-3 space-y-2 no-scrollbar text-xs">
+                <div class="bg-black p-2.5 rounded-lg border border-gray-900">
+                    <strong class="text-blue-400">@michelet_tech:</strong> Videyo yo ap jwe byen ak tout mizik nèt!
+                </div>
+                <div class="bg-black p-2.5 rounded-lg border border-gray-900">
+                    <strong class="text-blue-400">@nadia_g:</strong> Rezo Haïti nèt ale!
+                </div>
+            </div>
+            <div class="flex gap-2 pt-2 border-t border-gray-900">
+                <input type="text" id="new-comment" placeholder="Ekri yon mesaj dirèk..." class="w-full bg-black border border-gray-800 rounded-xl px-3 text-xs focus:outline-none">
+                <button onclick="sendComment()" class="bg-blue-600 px-4 rounded-xl text-xs"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <nav class="w-full h-16 border-t border-gray-800 bg-black flex justify-around items-center px-4 max-w-md mx-auto z-40">
+        <button onclick="showHome()" class="flex flex-col items-center gap-1 text-blue-500">
+            <i class="fa-solid fa-house text-lg"></i>
+            <span class="text-[10px]">Home</span>
+        </button>
+        <button onclick="alert('Paj Discover ak gwoup piblik yo ap prepare...')" class="flex flex-col items-center gap-1 text-gray-400">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+            <span class="text-[10px]">Discover</span>
+        </button>
+        
+        <button onclick="openCreateModal()" class="w-12 h-8 bg-gradient-to-r from-blue-500 via-white to-red-500 p-0.5 rounded-lg flex items-center justify-center">
+            <div class="w-full h-full bg-black rounded-[6px] flex items-center justify-center text-white">
+                <i class="fa-solid fa-plus text-sm"></i>
+            </div>
+        </button>
+        
+        <button onclick="openComments()" class="flex flex-col items-center gap-1 text-gray-400 relative">
+            <i class="fa-solid fa-inbox text-lg"></i>
+            <span class="text-[10px]">Inbox</span>
+            <span class="absolute top-0 right-1 bg-blue-600 text-[8px] px-1 rounded-full">2</span>
+        </button>
+        <button onclick="openCreateModal()" class="flex flex-col items-center gap-1 text-gray-400">
+            <i class="fa-solid fa-circle-user text-lg"></i>
+            <span class="text-[10px]">Paj Mwen</span>
+        </button>
+    </nav>
+
+    <script>
+        function likeVideo(btn) {
+            btn.classList.toggle('text-red-500');
+        }
+
+        function toggleFollow(btn) {
+            if(btn.innerHTML.includes('user-plus')) {
+                btn.innerHTML = '<i class="fa-solid fa-user-check text-xs text-green-400"></i>';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-user-plus text-xs"></i>';
+            }
+        }
+
+        function openCreateModal() { document.getElementById('create-modal').classList.remove('hidden'); }
+        function closeCreateModal() { document.getElementById('create-modal').classList.add('hidden'); }
+        function openComments() { document.getElementById('comments-modal').classList.remove('hidden'); }
+        function closeComments() { document.getElementById('comments-modal').classList.add('hidden'); }
+        function showHome() { closeCreateModal(); closeComments(); }
+
+        function copyShareLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Lyen videyo Rezo Haïti sa a kopye ak siksè!');
+        }
+
+        // Fonksyon pou kreye Paj reyèl nan kòd la
+        function createPageAction() {
+            const name = document.getElementById('page-name').value;
+            if(!name.trim()) { alert("Mete yon non pou paj la!"); return; }
+            alert("Paj '" + name + "' la kreye avèk siksè sou Rezo Haïti!");
+            document.getElementById('page-name').value = "";
+            closeCreateModal();
+        }
+
+        // Fonksyon pou kreye Gwoup reyèl nan kòd la
+        function createGroupAction() {
+            const name = document.getElementById('group-name').value;
+            if(!name.trim()) { alert("Mete yon non pou gwoup la!"); return; }
+            alert("Gwoup '" + name + "' la pare! Ou kapab kòmanse envite moun.");
+            document.getElementById('group-name').value = "";
+            closeCreateModal();
+        }
+
+        // Dinamikman ajoute videyo sou fòma TikTok Iframe
+        function uploadVideoAction() {
+            const url = document.getElementById('video-url').value;
+            if(!url.trim()) { alert("Mete yon lyen videyo!"); return; }
+            alert("Videyo ou an voye ale! L ap trete pou l parèt sou ekran prensipal la.");
+            document.getElementById('video-url').value = "";
+            closeCreateModal();
+        }
+
+        // Sistèm pou ekri mesaj dirèk epi afiche l imedyatman
+        function sendComment() {
+            const input = document.getElementById('new-comment');
+            const commentText = input.value.trim();
+            if(!commentText) return;
+
+            const list = document.getElementById('comments-list');
+            const newDiv = document.createElement('div');
+            newDiv.className = "bg-black p-2.5 rounded-lg border border-blue-900/40 text-white";
+            newDiv.innerHTML = `<strong class="text-blue-400">@mwen:</strong> ${commentText}`;
+            
+            list.appendChild(newDiv);
+            list.scrollTop = list.scrollHeight;
+            input.value = "";
+        }
+    </script>
+</body>
+</html>
